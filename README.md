@@ -1,6 +1,6 @@
 # Polynomial Composition Activations: Unleashing the Dynamics of Large Language Models
 
-This repository contains the official implementation of the paper **“Polynomial Composition Activations: Unleashing the Dynamics of Large Language Models”.**
+This repository contains the official implementation of the paper **[“Polynomial Composition Activations: Unleashing the Dynamics of Large Language Models](https://arxiv.org/pdf/2411.03884)”.**
 
 In this work, we introduce a novel activation function called **Polynomial Composition (PolyCom)**, which enhances the expressiveness of large language models (LLMs) through dynamic polynomial compositions. Our method significantly improves the performance of dense and mixture of experts (MoE) models across a variety of downstream tasks, without adding significant computational overhead.
 
@@ -43,7 +43,7 @@ To illustrate the effectiveness of PolyCom, we provide visualizations of trainin
 Downstrean performance dynamics on HellaSwag, MMLU Var, ARC-Challenge, and SciQ for MoE models with 200 billion training tokens.
 ![Downstream of MoE model](./assets/moe_training_eval.svg "Downstream evaluations of MoE model")
 
-For more details, please refer to our [paper](link to the paper).
+For more details, please refer to our paper: [Polynomial Composition Activations: Unleashing the Dynamics of Large Language Models](https://arxiv.org/pdf/2411.03884).
 
 ## Pretraining
 
