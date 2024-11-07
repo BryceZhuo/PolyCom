@@ -103,9 +103,23 @@ class PolyNorm(nn.Module):
     def forward(self, x):
         return weight[0] * torch.norm(x**3) + weight[1] * torch.norm(x**2) + weight[2] * torch.norm(x) + bias
 ```
-Example: Adding PolyNorm to a Custom Model
 
+**Example: Adding PolyNorm to a Custom Model**
+Below is an example of how to add PolyNorm to a simple feedforward network:
+```python
+class CustomModel(nn.Module):
+    def __init__(self, input_dim, hidden_dim, output_dim):
+        super(CustomModel, self).__init__()
+        self.layer1 = nn.Linear(input_dim, hidden_dim)
+        self.poly_norm = PolyNorm()  # Using PolyNorm as the activation function
+        self.layer2 = nn.Linear(hidden_dim, output_dim)
 
+    def forward(self, x):
+        x = self.layer1(x)
+        x = self.poly_norm(x)  # Apply PolyNorm activation
+        x = self.layer2(x)
+        return x
+```
 
 ## Citing this work
 If you find this work helpful or use it in your research, please consider citing our paper:
@@ -113,7 +127,7 @@ If you find this work helpful or use it in your research, please consider citing
 @article{zhuo2024polycom,
   title={Polynomial Composition Activations: Unleashing the Dynamics of Large Language Models},
   author={Zhijian Zhuo and Ya Wang and Yutao zeng and Xiaoqing Li and Xun Zhou and Jinwen Ma},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  journal={arXiv preprint arXiv:2411.03884},
   year={2024}
 }
 ```
