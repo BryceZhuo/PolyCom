@@ -95,13 +95,17 @@ bash run_pretrain.sh
 Using the follow PolyNorm class to replace other activation function like SwiGLU and ReLU.
 ```python
 class PolyNorm(nn.Module):
-    def __init__(self):
+    def __init__(self, eps=1e-6):
         super(PolyNorm, self).__init__()
         self.weight = nn.Parameter(torch.ones(3) / 3)
         self.bias = nn.Parameter(torch.zeros(1))
+        self.eps = eps
+
+    def _norm(self, x):
+        return x * torch.rsqrt(x.pow(2).mean(-1, keepdim=True) + eps)
 
     def forward(self, x):
-        return weight[0] * torch.norm(x**3) + weight[1] * torch.norm(x**2) + weight[2] * torch.norm(x) + bias
+        return weight[0] * self._norm(x**3) + weight[1] * self._norm(x**2) + weight[2] * self._norm(x) + bias
 ```
 
 **Example: Adding PolyNorm to a Custom Model**
