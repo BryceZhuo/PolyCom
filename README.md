@@ -94,29 +94,29 @@ bash run_pretrain.sh
 ## Using PolyNorm in Other Models
 Using the follow PolyNorm class to replace other activation function like SwiGLU and ReLU.
 ```python
-class PolyNorm(nn.Module):
+class PolyNorm(torch.nn.Module):
     def __init__(self, eps=1e-6):
         super(PolyNorm, self).__init__()
-        self.weight = nn.Parameter(torch.ones(3) / 3)
-        self.bias = nn.Parameter(torch.zeros(1))
+        self.weight = torch.nn.Parameter(torch.ones(3) / 3)
+        self.bias = torch.nn.Parameter(torch.zeros(1))
         self.eps = eps
 
     def _norm(self, x):
-        return x * torch.rsqrt(x.pow(2).mean(-1, keepdim=True) + eps)
+        return x * torch.rsqrt(x.pow(2).mean(-1, keepdim=True) + self.eps)
 
     def forward(self, x):
-        return weight[0] * self._norm(x**3) + weight[1] * self._norm(x**2) + weight[2] * self._norm(x) + bias
+        return self.weight[0] * self._norm(x**3) + self.weight[1] * self._norm(x**2) + self.weight[2] * self._norm(x) + self.bias
 ```
 
 **Example: Adding PolyNorm to a Custom Model**
 Below is an example of how to add PolyNorm to a simple feedforward network:
 ```python
-class CustomModel(nn.Module):
+class CustomModel(torch.nn.Module):
     def __init__(self, input_dim, hidden_dim, output_dim):
         super(CustomModel, self).__init__()
-        self.layer1 = nn.Linear(input_dim, hidden_dim)
+        self.layer1 = torch.nn.Linear(input_dim, hidden_dim)
         self.poly_norm = PolyNorm()  # Using PolyNorm as the activation function
-        self.layer2 = nn.Linear(hidden_dim, output_dim)
+        self.layer2 = torch.nn.Linear(hidden_dim, output_dim)
 
     def forward(self, x):
         x = self.layer1(x)
