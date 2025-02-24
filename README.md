@@ -1,6 +1,6 @@
 # Polynomial Composition Activations: Unleashing the Dynamics of Large Language Models
 
-This repository contains the official implementation of the paper **[“Polynomial Composition Activations: Unleashing the Dynamics of Large Language Models](https://arxiv.org/pdf/2411.03884)”.**
+This repository contains the official implementation of  ICLR 2025 paper **[“Polynomial Composition Activations: Unleashing the Dynamics of Large Language Models](https://arxiv.org/pdf/2411.03884)”.**
 
 In this work, we introduce a novel activation function called **Polynomial Composition (PolyCom)**, which enhances the expressiveness of large language models (LLMs) through dynamic polynomial compositions. Our method significantly improves the performance of dense and mixture of experts (MoE) models across a variety of downstream tasks, without adding significant computational overhead.
 
@@ -128,11 +128,11 @@ class CustomModel(torch.nn.Module):
 ## Citing this work
 If you find this work helpful or use it in your research, please consider citing our paper:
 ```bibtex
-@article{zhuo2024polycom,
+@inproceedings{zhuo2025polycom,
   title={Polynomial Composition Activations: Unleashing the Dynamics of Large Language Models},
   author={Zhijian Zhuo and Ya Wang and Yutao zeng and Xiaoqing Li and Xun Zhou and Jinwen Ma},
-  journal={arXiv preprint arXiv:2411.03884},
-  year={2024}
+  booktitle={ICLR 2025},
+  year={2025}
 }
 ```
 
