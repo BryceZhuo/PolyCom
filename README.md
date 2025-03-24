@@ -16,6 +16,7 @@ In this work, we introduce a novel activation function called **Polynomial Compo
       - [Installation](#installation)
       - [Datasets](#datasets)
       - [Training](#training)
+      - [Checkpoints](#checkpoints)
     - [MoE model](#moe-model)
       - [Installation](#installation-1)
       - [Datasets](#datasets-1)
@@ -62,6 +63,13 @@ cd dense_model
 bash run_pretrain.sh
 ```
 
+#### Checkpoints
+We provide the checkpoints of the dense model with PolyReLU and PolyNorm activations in the following links:
+
+| Model | Link |
+ | ---- | ---- |
+ | PolyReLU_1B | [link](https://huggingface.co/Open-Foundation-Models/PolyReLU_1B) |
+ | PolyNorm_1B | [link](https://huggingface.co/Open-Foundation-Models/PolyNorm_1B) |
 
 ### MoE model
 #### Installation
@@ -71,7 +79,7 @@ pip install -e .
 ```
 
 #### Datasets
-Fro the MoE model, we use the **OLMoE-mix-0924** dataset. You can download it from [here](https://huggingface.co/datasets/allenai/OLMoE-mix-0924). Then you need use the following command to change the dataset to the format that our model can use:
+For the MoE model, we use the **OLMoE-mix-0924** dataset. You can download it from [here](https://huggingface.co/datasets/allenai/OLMoE-mix-0924). Then you need use the following command to change the dataset to the format that our model can use:
 ```python
 dolma tokens \
 --documents ${PATH_TO_DOWNLOADED_DATA} \
@@ -130,7 +138,7 @@ If you find this work helpful or use it in your research, please consider citing
 ```bibtex
 @inproceedings{zhuo2025polycom,
   title={Polynomial Composition Activations: Unleashing the Dynamics of Large Language Models},
-  author={Zhijian Zhuo and Ya Wang and Yutao zeng and Xiaoqing Li and Xun Zhou and Jinwen Ma},
+  author={Zhijian Zhuo and Ya Wang and Yutao Zeng and Xiaoqing Li and Xun Zhou and Jinwen Ma},
   booktitle={ICLR 2025},
   year={2025}
 }
