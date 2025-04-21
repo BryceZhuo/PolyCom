@@ -1,4 +1,38 @@
+<div align="center">
+ 👋 Hi, everyone! 
+    <br>
+    We are <b>ByteDance Seed team.</b>
+</div>
+
+<p align="center">
+  You can get to know us better through the following channels👇
+  <br>
+  <a href="https://team.doubao.com/">
+    <img src="https://img.shields.io/badge/Website-%231e37ff?style=for-the-badge&logo=bytedance&logoColor=white"></a>
+  <a href="https://github.com/user-attachments/assets/93481cda-a7f3-47f3-b333-fe6b3da86b78">
+    <img src="https://img.shields.io/badge/WeChat-07C160?style=for-the-badge&logo=wechat&logoColor=white"></a>
+ <a href="https://www.xiaohongshu.com/user/profile/668e7e15000000000303157d?xsec_token=ABl2-aqekpytY6A8TuxjrwnZskU-6BsMRE_ufQQaSAvjc%3D&xsec_source=pc_search">
+    <img src="https://img.shields.io/badge/Xiaohongshu-%23FF2442?style=for-the-badge&logo=xiaohongshu&logoColor=white"></a>
+  <a href="https://www.zhihu.com/org/dou-bao-da-mo-xing-tuan-dui/">
+    <img src="https://img.shields.io/badge/zhihu-%230084FF?style=for-the-badge&logo=zhihu&logoColor=white"></a>
+</p>
+
+![seed logo](https://github.com/user-attachments/assets/c42e675e-497c-4508-8bb9-093ad4d1f216)
+
+<!-- 注释：以上为Seed官方信息，可直接复制使用，请注意导入“Seed WeChat”（第12行）、“Seed logo”(第20行)图片替换 -->
+
+
 # Polynomial Composition Activations: Unleashing the Dynamics of Large Language Models
+<p align="center">
+  <a href="https://github.com/kaihemo/SDD/tree/sdd">
+    <img src="https://img.shields.io/badge/SDD-Project Page-yellow"></a>
+  <a href="https://arxiv.org/pdf/2502.15499">
+    <img src="https://img.shields.io/badge/SDD-Tech Report-red"></a>
+  <!-- <a href="XXXX">
+    <img src="https://img.shields.io/badge/SDD-Hugging Face-orange"></a> -->
+  <a href="[XXX](https://opensource.org/license/MIT)">
+    <img src="https://img.shields.io/badge/License-MIT-blue"></a>
+</p>
 
 This repository contains the official implementation of  ICLR 2025 paper **[“Polynomial Composition Activations: Unleashing the Dynamics of Large Language Models](https://arxiv.org/pdf/2411.03884)”.**
 
@@ -66,10 +100,10 @@ bash run_pretrain.sh
 #### Checkpoints
 We provide the checkpoints of the dense model with PolyReLU and PolyNorm activations in the following links:
 
-| Model | Link |
- | ---- | ---- |
- | PolyReLU_1B | [link](https://huggingface.co/Open-Foundation-Models/PolyReLU_1B) |
- | PolyNorm_1B | [link](https://huggingface.co/Open-Foundation-Models/PolyNorm_1B) |
+| Model       | Link                                                              |
+| ----------- | ----------------------------------------------------------------- |
+| PolyReLU_1B | [link](https://huggingface.co/Open-Foundation-Models/PolyReLU_1B) |
+| PolyNorm_1B | [link](https://huggingface.co/Open-Foundation-Models/PolyNorm_1B) |
 
 ### MoE model
 #### Installation
