@@ -24,10 +24,10 @@
 
 # Polynomial Composition Activations: Unleashing the Dynamics of Large Language Models
 <p align="center">
-  <a href="https://github.com/kaihemo/SDD/tree/sdd">
-    <img src="https://img.shields.io/badge/SDD-Project Page-yellow"></a>
-  <a href="https://arxiv.org/pdf/2502.15499">
-    <img src="https://img.shields.io/badge/SDD-Tech Report-red"></a>
+  <a href="https://github.com/BryceZhuo/PolyCom">
+    <img src="https://img.shields.io/badge/PolyCom-Project Page-yellow"></a>
+  <a href="https://arxiv.org/pdf/2411.03884">
+    <img src="https://img.shields.io/badge/PolyCom-Tech Report-red"></a>
   <!-- <a href="XXXX">
     <img src="https://img.shields.io/badge/SDD-Hugging Face-orange"></a> -->
   <a href="[XXX](https://opensource.org/license/MIT)">
@@ -58,6 +58,7 @@ In this work, we introduce a novel activation function called **Polynomial Compo
   - [Using PolyNorm in Other Models](#using-polynorm-in-other-models)
   - [Citing this work](#citing-this-work)
   - [Acknowledgement](#acknowledgement)
+  - [About ByteDance Seed Team](#about-bytedance-seed-team)
 
 ## Introduction
 
@@ -184,3 +185,7 @@ Our work is based on the following repositories:
 - [OLMoE](https://github.com/allenai/OLMoE)
 
 Thank you for your interest in our work. We hope our contributions to large language model research provide valuable insights and tools for the research community.
+
+## About [ByteDance Seed Team](https://team.doubao.com/)
+
+Founded in 2023, ByteDance Seed Team is dedicated to crafting the industry's most advanced AI foundation models. The team aspires to become a world-class research team and make significant contributions to the advancement of science and society.
